@@ -5,7 +5,6 @@ import {
   RouteLocationNormalized,
   RouteRecordRaw,
 } from 'vue-router';
-import { globalStartupGuard, authGuard } from '@/helpers/global/session-helper';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -29,12 +28,6 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
-
-router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-  globalStartupGuard().then(() => {
-    authGuard(to, from, next);
-  });
 });
 
 export default router;
