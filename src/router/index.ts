@@ -6,7 +6,6 @@ import {
   RouteRecordRaw,
 } from 'vue-router';
 import { globalStartupGuard, authGuard } from '@/helpers/global/session-helper';
-import HomeLayout from '@/layouts/HomeLayout.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',

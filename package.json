@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "stylelint": "stylelint \"src/**/*.{vue,scss}\"",
-    "stylelint:fix": "stylelint \"src/**/*.{vue,scss}\" --fix"
+    "start": "node server.js"
   },
   "author": {
     "name": "Carlos Guzman"
@@ -17,7 +16,9 @@
     "core-js": "^3.6.5",
     "date-fns": "^2.28.0",
     "date-fns-tz": "^1.3.0",
+    "express": "^4.17.3",
     "sass": "^1.49.9",
+    "serve-static": "^1.14.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

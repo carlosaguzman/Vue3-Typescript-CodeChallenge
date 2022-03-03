@@ -8,7 +8,7 @@ export interface Actions {
 }
 
 export const actions: ActionTree<State, Device[]> & Actions = {
-  [ActionTypes.GET_DEVICES]({ commit }, data) {
+  [ActionTypes.GET_DEVICES]({ commit }) {
     return new Promise((resolve) => {
       axios.get('https://other.stakeordie.com/devices/reads').then((res) => {
         console.log('asdfasdfasdf');
