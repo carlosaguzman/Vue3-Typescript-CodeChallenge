@@ -11,7 +11,6 @@ export const actions: ActionTree<State, Device[]> & Actions = {
   [ActionTypes.GET_DEVICES]({ commit }) {
     return new Promise((resolve) => {
       axios.get('https://other.stakeordie.com/devices/reads').then((res) => {
-        console.log('asdfasdfasdf');
         commit(MutationTypes.SET_DEVICES, res.data);
         resolve(res.data);
       });

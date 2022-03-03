@@ -33,8 +33,6 @@ export default defineComponent({
   },
   methods: {
     isActive(route: string) {
-      console.log('ssss----', this.$route.path);
-      console.log('pppp----', route);
       return this.$route.path === route;
     },
   },

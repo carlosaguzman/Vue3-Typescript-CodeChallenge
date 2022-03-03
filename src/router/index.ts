@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: import(/* webpackChunkName: "dashboard" */ '../layouts/HomeLayout.vue'),
+    component: () => import('@/layouts/HomeLayout.vue'),
     children: [
       {
         path: '/',
